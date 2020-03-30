@@ -9,9 +9,9 @@
 
 2.	Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 
-A.	Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
+#Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
 
-B.	Instalasi Hadoop pada windows
+#Instalasi Hadoop pada windows
 Software yang dibutuhkan :
 1.	Aplikasi Hadoop
 2.	Java JDK
@@ -65,10 +65,6 @@ a.	Configurasi
 </configuration>
 	
 6.	dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
-
-	
-
-
 # Konfigurasi Hadoop
 1.	File Dowload, Hadoop Configuration.zip
 2.	Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)

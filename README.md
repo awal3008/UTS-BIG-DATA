@@ -1,11 +1,11 @@
 # UTS-BIG-DATA
-UTS PENGENALAN BIG DATA
+						UTS PENGENALAN BIG DATA
 1.	Cari dan sebutkan 3 DBMS yang bisa digunakan untuk mengelola big data.
-a.	Oracle Big Data SQL
-b.	Microsoft SQL Server
-c.	IBM DB2
-d.	SAP Saybase ASE
-e.	Apache Hadoop
+Oracle Big Data SQL
+Microsoft SQL Server
+IBM DB2
+SAP Saybase ASE
+Apache Hadoop
 
 2.	Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 

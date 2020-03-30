@@ -20,7 +20,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ### Configurasi
 1. Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
  
-```<configuration>
+<configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>

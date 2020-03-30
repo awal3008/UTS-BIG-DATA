@@ -9,22 +9,23 @@
 
 2.	Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 
-### Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
+## Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
 
-### Instalasi Hadoop pada windows
+## Instalasi Hadoop pada windows
 Software yang dibutuhkan :
 1.	Aplikasi Hadoop
 2.	Java JDK
+
 Setalah software diatas di install, selanjutnya mengconfigurasinya.
-a.	Configurasi
-1.	Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini. 
+### Configurasi
+-- Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini. 
 <configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
 </configuration>
-2.	Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
+-- Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
 <configuration>
    <property>
        <name>mapreduce.framework.name</name>

@@ -18,26 +18,28 @@ Software yang dibutuhkan :
 
 Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ### Configurasi
--- Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini. 
+1. Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
+ 
 <configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
 </configuration>
--- Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
+
+2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
 <configuration>
    <property>
        <name>mapreduce.framework.name</name>
        <value>yarn</value>
    </property>
 </configuration>
-3.	Buat 3 Folder
+3. Buat 3 Folder
 -	Buat folder "data" di bawah "C: \ Hadoop-2.8.0"
 -	Buat folder "datanode" di bawah "C: \ Hadoop-2.8.0 \ data"
 -	Buat folder "namenode" di bawah "C: \ Hadoop-2.8.0 \ data"
 
-4.	Edit file C: \ Hadoop-2.8.0 / etc / hadoop / hdfs-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
+4. Edit file C: \ Hadoop-2.8.0 / etc / hadoop / hdfs-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
 <configuration>
    <property>
        <name>dfs.replication</name>
@@ -53,7 +55,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
    </property>
 </configuration>
 
-5.	Edit file C: /Hadoop-2.8.0/etc/hadoop/yarn-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
+5. Edit file C: /Hadoop-2.8.0/etc/hadoop/yarn-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
 <configuration>
    <property>
     	<name>yarn.nodemanager.aux-services</name>
@@ -65,14 +67,14 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
    </property>
 </configuration>
 	
-6.	dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
-# Konfigurasi Hadoop
+6. dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
+## Konfigurasi Hadoop
 1.	File Dowload, Hadoop Configuration.zip
 2.	Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
 3.	Buka cmd dan ketikkan perintah “hdfs namenode –format” . Maka Hasilnya seperti dibawa ini.
 ![1](https://user-images.githubusercontent.com/55679463/77932686-78042600-72e0-11ea-9903-a4ab2a8c9e8f.PNG)
 
-# Menjalankan Hadoop
+## Menjalankan Hadoop
 1.	Buka cmd dan ubah direktori menjadi "C: \ Hadoop-2.8.0 \ sbin" dan ketik "start-all.cmd" untuk memulai apache.
  ![2](https://user-images.githubusercontent.com/55679463/77933079-feb90300-72e0-11ea-95a4-1099eeda4932.PNG)
 

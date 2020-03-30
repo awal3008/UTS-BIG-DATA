@@ -77,9 +77,9 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
 ```
 ## Konfigurasi Hadoop
-1.	File Dowload, Hadoop Configuration.zip
-2.	Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
-3.	Buka cmd dan ketikkan perintah “hdfs namenode –format” . Maka Hasilnya seperti dibawa ini.
+1. File Dowload, Hadoop Configuration.zip
+2. Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
+3. Buka cmd dan ketikkan perintah “hdfs namenode –format” . Maka Hasilnya seperti dibawa ini.
 ![1](https://user-images.githubusercontent.com/55679463/77932686-78042600-72e0-11ea-9903-a4ab2a8c9e8f.PNG)
 
 ## Menjalankan Hadoop
@@ -91,7 +91,9 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 -	Dadoode Hadoop
 -	Manajer Sumber Daya YARN
 -	YARN Node Manager
+
 3.	Buka :http://localhost:8088
+
  ![3](https://user-images.githubusercontent.com/55679463/77933237-28722a00-72e1-11ea-8204-31017852693d.PNG)
 
 # Contoh CRUD Dalam Hadoop

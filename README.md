@@ -31,7 +31,7 @@ a.	Configurasi
        <value>yarn</value>
    </property>
 </configuration>
-3.	Buat 3 Folde
+3.	Buat 3 Folder
 -	Buat folder "data" di bawah "C: \ Hadoop-2.8.0"
 -	Buat folder "datanode" di bawah "C: \ Hadoop-2.8.0 \ data"
 -	Buat folder "namenode" di bawah "C: \ Hadoop-2.8.0 \ data"
@@ -69,12 +69,12 @@ a.	Configurasi
 	
 
 
-Konfigurasi Hadoop
+#Konfigurasi Hadoop
 1.	File Dowload, Hadoop Configuration.zip
 2.	Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
 3.	Buka cmd dan ketikkan perintah “hdfs namenode –format” . Maka Hasilnya seperti dibawa ini.
- 
-Menjalankan Hadoop
+![1](https://user-images.githubusercontent.com/55679463/77932686-78042600-72e0-11ea-9903-a4ab2a8c9e8f.PNG) 
+#Menjalankan Hadoop
 1.	Buka cmd dan ubah direktori menjadi "C: \ Hadoop-2.8.0 \ sbin" dan ketik "start-all.cmd" untuk memulai apache.
  
 2.	Pastikan aplikasi ini berjalan

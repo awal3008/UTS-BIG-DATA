@@ -19,31 +19,31 @@ Software yang dibutuhkan :
 Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ### Configurasi
 1. Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
- 
-/*<configuration>
+```
+<configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
-</configuration>*/
-
+</configuration>
+```
 2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
-
-```<configuration>
+```
+<configuration>
    <property>
        <name>mapreduce.framework.name</name>
        <value>yarn</value>
    </property>
 </configuration>
-
+```
 3. Buat 3 Folder
 -	Buat folder "data" di bawah "C: \ Hadoop-2.8.0"
 -	Buat folder "datanode" di bawah "C: \ Hadoop-2.8.0 \ data"
 -	Buat folder "namenode" di bawah "C: \ Hadoop-2.8.0 \ data"
 
 4. Edit file C: \ Hadoop-2.8.0 / etc / hadoop / hdfs-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
-
-```<configuration>
+```
+<configuration>
    <property>
        <name>dfs.replication</name>
        <value>1</value>
@@ -56,11 +56,11 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
        <name>dfs.datanode.data.dir</name>
        <value>/hadoop-2.8.0/data/datanode</value>
    </property>
-</configuration>```
-
+</configuration>
+```
 5. Edit file C: /Hadoop-2.8.0/etc/hadoop/yarn-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
-
-```<configuration>
+```
+<configuration>
    <property>
     	<name>yarn.nodemanager.aux-services</name>
     	<value>mapreduce_shuffle</value>
@@ -69,9 +69,13 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
       	<name>yarn.nodemanager.auxservices.mapreduce.shuffle.class</name>  
 	<value>org.apache.hadoop.mapred.ShuffleHandler</value>
    </property>
-</configuration>```
+</configuration>
+```
 	
-6. dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
+6. dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur 
+```
+“JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
+```
 ## Konfigurasi Hadoop
 1.	File Dowload, Hadoop Configuration.zip
 2.	Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
@@ -93,30 +97,43 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 # Contoh CRUD Dalam Hadoop
 Agar mempermudah pengelolaan data maka kita perlu software atau framework MapReduce yang di mana MapReduce merupakan sebuah model pemograman yang didesain untuk dapat melakukan pemrosesan data dengan jumlah yang sangat besar dengan cara membagi pemrosesan tersebut ke beberapa tugas yang indipenden satu sama lain. Selanjutnya MapReduceClient.jar dan Data yang akan digunakan taruh di "C: /".
 1.	Buka cmd dalam mode Administratif dan pindah ke "C: /Hadoop-2.8.0/sbin" dan mulai cluster.
-|Start-all.cmd|
+```
+Start-all.cmd
+```
  ![4](https://user-images.githubusercontent.com/55679463/77933309-3a53cd00-72e1-11ea-93b8-5c4da01d4fe6.PNG)
 
 2.	Buat direktori input dalam HDFS.
+```
 hadoop fs -mkdir /input_dir
-
+```
 
 3.	Salin file teks input bernama input_file.txt(data yang akan digunakan) di direktori input (input_dir) HDFS.
-```hadoop fs -put C:/input_file.txt /input_dir````
+```
+hadoop fs -put C:/input_file.txt /input_dir
+````
 4.	Verifikasi input_file.txt tersedia di direktori input HDFS (input_dir).
-```hadoop fs -ls /input_dir/```
+```
+hadoop fs -ls /input_dir/
+```
 5. Verifikasi konten dari file yang disalin.
-```hadoop dfs -cat /input_dir/input_file.txt```
+```
+hadoop dfs -cat /input_dir/input_file.txt
+```
 ![5](https://user-images.githubusercontent.com/55679463/77933387-4f306080-72e1-11ea-8cb1-716ca0b27608.PNG)
  
 			Contoh Datanya
 
 6. Jalankan MapReduceClient.jar dan berikan juga masukan dan direktori keluar.
-```hadoop jar C:/MapReduceClient.jar wordcount /input_dir /output_dir```
+```
+hadoop jar C:/MapReduceClient.jar wordcount /input_dir /output_dir
+```
 ![6](https://user-images.githubusercontent.com/55679463/77933454-68d1a800-72e1-11ea-97cb-965b15e7ae45.PNG)
 
  
 7. Untuk melihat file output yang dihasilkan.
-```hadoop dfs -cat /output_dir/*```
+```
+hadoop dfs -cat /output_dir/*
+```
 
 ![7](https://user-images.githubusercontent.com/55679463/77933517-7c7d0e80-72e1-11ea-93fc-3ab2b7b6ac4b.PNG)
  

@@ -28,19 +28,22 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 </configuration>//
 
 2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
-<configuration>
+
+\\<configuration>
    <property>
        <name>mapreduce.framework.name</name>
        <value>yarn</value>
    </property>
-</configuration>
+</configuration>\\
+
 3. Buat 3 Folder
 -	Buat folder "data" di bawah "C: \ Hadoop-2.8.0"
 -	Buat folder "datanode" di bawah "C: \ Hadoop-2.8.0 \ data"
 -	Buat folder "namenode" di bawah "C: \ Hadoop-2.8.0 \ data"
 
 4. Edit file C: \ Hadoop-2.8.0 / etc / hadoop / hdfs-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
-<configuration>
+
+\\<configuration>
    <property>
        <name>dfs.replication</name>
        <value>1</value>
@@ -53,10 +56,11 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
        <name>dfs.datanode.data.dir</name>
        <value>/hadoop-2.8.0/data/datanode</value>
    </property>
-</configuration>
+</configuration>\\
 
 5. Edit file C: /Hadoop-2.8.0/etc/hadoop/yarn-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
-<configuration>
+
+\\<configuration>
    <property>
     	<name>yarn.nodemanager.aux-services</name>
     	<value>mapreduce_shuffle</value>
@@ -65,7 +69,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
       	<name>yarn.nodemanager.auxservices.mapreduce.shuffle.class</name>  
 	<value>org.apache.hadoop.mapred.ShuffleHandler</value>
    </property>
-</configuration>
+</configuration>\\
 	
 6. dit file C: /Hadoop-2.8.0/etc/hadoop/hadoop-env.cmd dengan menutup baris perintah “JAVA_HOME =% JAVA_HOME%” alih-alih mengatur “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
 ## Konfigurasi Hadoop
@@ -89,7 +93,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 # Contoh CRUD Dalam Hadoop
 	Agar mempermudah pengelolaan data maka kita perlu software atau framework MapReduce yang di mana MapReduce merupakan sebuah model pemograman yang didesain untuk dapat melakukan pemrosesan data dengan jumlah yang sangat besar dengan cara membagi pemrosesan tersebut ke beberapa tugas yang indipenden satu sama lain. Selanjutnya MapReduceClient.jar dan Data yang akan digunakan taruh di "C: /".
 1.	Buka cmd dalam mode Administratif dan pindah ke "C: /Hadoop-2.8.0/sbin" dan mulai cluster.
-Start-all.cmd
+|Start-all.cmd|
  ![4](https://user-images.githubusercontent.com/55679463/77933309-3a53cd00-72e1-11ea-93b8-5c4da01d4fe6.PNG)
 
 2.	Buat direktori input dalam HDFS.

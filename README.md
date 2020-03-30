@@ -25,7 +25,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
-</configuration>```
+</configuration>
 
 2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
 
@@ -34,7 +34,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
        <name>mapreduce.framework.name</name>
        <value>yarn</value>
    </property>
-</configuration>```
+</configuration>
 
 3. Buat 3 Folder
 -	Buat folder "data" di bawah "C: \ Hadoop-2.8.0"

@@ -9,9 +9,9 @@
 
 2.	Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 
-## Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
+## A.Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
 
-## Instalasi Hadoop pada windows
+## B.Instalasi Hadoop pada windows
 Software yang dibutuhkan :
 1.	Aplikasi Hadoop
 2.	Java JDK
@@ -76,13 +76,13 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ```
 “JAVA_HOME = C: \ Java” (Pada C: \ java this path ke file jdk.18.0).
 ```
-## Konfigurasi Hadoop
+### Konfigurasi Hadoop
 1. File Dowload, Hadoop Configuration.zip
 2. Hapus file bin pada C: \ Hadoop-2.8.0 \ bin, diganti dengan file bin pada file yang baru saja diunduh (dari Hadoop Configuration.zip)
 3. Buka cmd dan ketikkan perintah “hdfs namenode –format” . Maka Hasilnya seperti dibawa ini.
 ![1](https://user-images.githubusercontent.com/55679463/77932686-78042600-72e0-11ea-9903-a4ab2a8c9e8f.PNG)
 
-## Menjalankan Hadoop
+### Menjalankan Hadoop
 1.	Buka cmd dan ubah direktori menjadi "C: \ Hadoop-2.8.0 \ sbin" dan ketik "start-all.cmd" untuk memulai apache.
  ![2](https://user-images.githubusercontent.com/55679463/77933079-feb90300-72e0-11ea-95a4-1099eeda4932.PNG)
 
@@ -96,7 +96,7 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 
  ![3](https://user-images.githubusercontent.com/55679463/77933237-28722a00-72e1-11ea-8204-31017852693d.PNG)
 
-# Contoh CRUD Dalam Hadoop
+# C.Contoh CRUD Dalam Hadoop
 Agar mempermudah pengelolaan data maka kita perlu software atau framework MapReduce yang di mana MapReduce merupakan sebuah model pemograman yang didesain untuk dapat melakukan pemrosesan data dengan jumlah yang sangat besar dengan cara membagi pemrosesan tersebut ke beberapa tugas yang indipenden satu sama lain. Selanjutnya MapReduceClient.jar dan Data yang akan digunakan taruh di "C: /".
 1.	Buka cmd dalam mode Administratif dan pindah ke "C: /Hadoop-2.8.0/sbin" dan mulai cluster.
 ```
@@ -140,7 +140,7 @@ hadoop dfs -cat /output_dir/*
 ![7](https://user-images.githubusercontent.com/55679463/77933517-7c7d0e80-72e1-11ea-93fc-3ab2b7b6ac4b.PNG)
  
 			Hasil Outputnya
-# Arsitektur Dari Contoh Kasus A
+# D. Arsitektur Dari Contoh Kasus A
 Pada arsitektur ini terdapat 3 bagian utama yaitu All Data Source,Big Data Ecosystem dan Analytic Applications. Yang dimana pada data source terdapat berbagai macam data mulai dari teks,audio,video dll untuk di exstraksi ke data ecosystem sehingga menjadi data yang akan digunakan untuk menganalisis bagaimana penyebab dan pengaruh DNA dan GEN terhadapat penyakit kanker.
 
 ![8](https://user-images.githubusercontent.com/55679463/77933558-89016700-72e1-11ea-9336-736e9e4d3bf6.PNG)

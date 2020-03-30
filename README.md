@@ -20,12 +20,12 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ### Configurasi
 1. Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
  
-<configuration>
+/*<configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
-</configuration>
+</configuration>*/
 
 2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
 

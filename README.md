@@ -9,9 +9,9 @@
 
 2.	Carilah contoh masalah big data yang bisa dikelola menggunakan salah satu DBMS tersebut, jelaskan mulai dari instalasi sampai CRUD untuk data menggunakan DBMS tersebut. Asumsikan anda akan memecahkan masalah big data yang sudah anda cari contoh tadi, jelaskan kira-kira bagaimana arsitektur dari solusi big data menggunakan DBMS tersebut, gambarkan diagramnya.
 
-# Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
+### Contoh DBMS Hadoop  Dalam pengobatan Kanker dan Genomic
 
-# Instalasi Hadoop pada windows
+### Instalasi Hadoop pada windows
 Software yang dibutuhkan :
 1.	Aplikasi Hadoop
 2.	Java JDK

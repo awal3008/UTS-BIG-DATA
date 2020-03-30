@@ -20,12 +20,12 @@ Setalah software diatas di install, selanjutnya mengconfigurasinya.
 ### Configurasi
 1. Edit file C: /Hadoop-2.8.0/etc/hadoop/core-site.xml , rekatkan di bawah paragraf xml dan simpan file ini.
  
-//<configuration>
+```<configuration>
    <property>
        <name>fs.defaultFS</name>
        <value>hdfs://localhost:9000</value>
    </property>
-</configuration>//
+</configuration>```
 
 2. Ganti nama "mapred-site.xml.template" menjadi "mapred-site.xml" dan edit file ini C: /Hadoop-2.8.0/etc/hadoop/mapred-site.xml , tempel di bawah paragraf xml dan simpan file ini.
 
@@ -104,18 +104,18 @@ hadoop fs -mkdir /input_dir
 hadoop fs -put C:/input_file.txt /input_dir
 4.	Verifikasi input_file.txt tersedia di direktori input HDFS (input_dir).
 hadoop fs -ls /input_dir/
-5.	Verifikasi konten dari file yang disalin.
+5. Verifikasi konten dari file yang disalin.
 hadoop dfs -cat /input_dir/input_file.txt
 ![5](https://user-images.githubusercontent.com/55679463/77933387-4f306080-72e1-11ea-8cb1-716ca0b27608.PNG)
  
 			Contoh Datanya
 
-6.	Jalankan MapReduceClient.jar dan berikan juga masukan dan direktori keluar.
+6. Jalankan MapReduceClient.jar dan berikan juga masukan dan direktori keluar.
 hadoop jar C:/MapReduceClient.jar wordcount /input_dir /output_dir
 ![6](https://user-images.githubusercontent.com/55679463/77933454-68d1a800-72e1-11ea-97cb-965b15e7ae45.PNG)
 
  
-7.	Untuk melihat file output yang dihasilkan.
+7. Untuk melihat file output yang dihasilkan.
 hadoop dfs -cat /output_dir/*
 
 ![7](https://user-images.githubusercontent.com/55679463/77933517-7c7d0e80-72e1-11ea-93fc-3ab2b7b6ac4b.PNG)
